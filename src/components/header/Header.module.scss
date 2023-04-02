@@ -1,0 +1,98 @@
+ @import '@/styles/vars.scss';
+// $color-white: #ffffff;
+// $color-blue: #0000ff;
+// $fontColor: $color-white;
+// $backColor: #051146;
+// $backColorTransparance: #051146c0;
+
+// @mixin tablet {
+//     @media only screen and (max-width: 765px) {
+//         @content
+//     }
+      
+// };
+
+// @mixin desktop {
+//     @media only screen and (min-width: 1000px) {
+//         @content
+//     }
+    
+// };
+
+$fontWeight: 500;
+$headerHeight: 68px;
+
+.headerContainer {
+    display: flex;
+    width: 100%;
+    height: $headerHeight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    align-items: center;
+    z-index: 99;
+    background-color: $backColorTransparance;
+}
+
+.header {
+    display: flex;
+    padding: 15px 80px;
+    color: $fontColor;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: $fontWeight;
+    font-size: 1.1em;
+    transition: 0.5s;
+
+    @include tablet {
+        padding: 15px 40px;
+    }
+}
+
+.btnLogin {
+    display: flex;
+    flex-wrap: wrap;
+    color: $fontColor;
+    height: 2em;
+    background: transparent;
+    align-content: center;
+    border: 2px solid;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 30px;
+    border-color: $fontColor;
+    transition: 0.5s;
+    font-weight: $fontWeight;
+    font-size: 1.1em;
+    padding: 5px 15px;
+
+    @include tablet {
+        margin-left: 5px;
+    }
+}
+
+.btnLogin:hover {
+    color: $backColor;
+    background: $fontColor;
+    border-color: $fontColor;
+}
+
+.header .logo {
+    font-size: 1.5em;
+    user-select: none;
+}
+
+.rightHeader {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img {
+    border-radius: 50%;
+    padding: 5px 15px;
+}
